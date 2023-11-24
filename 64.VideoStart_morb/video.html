@@ -1,0 +1,63 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Untitled Document</title>
+<link href="css/video.css" rel="stylesheet" type="text/css">
+<link href="css/mists_vid.css" rel="stylesheet" type="text/css">
+</head>
+	
+<body>
+<div>
+  <video id="displayed_video" preload="auto" muted="muted" autoplay="autoplay" loop="loop" >
+    <source src="video/IMG_7148.mp4" type="video/mp4">
+  </video>
+</div> 
+
+<div class="centered_text">
+<h1 id="truisum" onmouseover="onTruismText()" onmouseout="outTruismText()" onClick="changeVideo()"> FAKE OR REAL, INDIFFERENCE IS A POWERFUL PERSONAL WEAPON </h1>	
+	
+</div>
+	
+<script>
+
+var channel = 1;
+var pausedAt = 0;
+//referance to the videos 
+
+var display_video = document.getElementById("displayed_video");
+	
+//refereance for sound
+	
+var mySound = new Audio("sounds/jay.wav");
+	
+//referance to the videos
+
+var IMG_7148 = "video/IMG_7148.mp4";
+var views = "video/views.mp4";
+
+function onTruismText(){
+	document.getElementById("displayed_video").style.filter = "invert(100%)";
+}
+function outTruismText(){
+	document.getElementById("displayed_video").style.filter = "invert(0%)";
+	
+}
+function changeVideo(){
+	console.log("will change video");
+	pausedAt = display_video.currentTime;
+	if (channel == 0){
+		displayed_video.src = IMG_7148;
+		display_video.currentTime = pausedAt;
+		channel = 1;
+	}else{	displayed_video.src = views;
+		display_video.currentTime = pausedAt;
+		channel = 0;
+}
+	mySound.play();
+}
+</script>
+	
+</body>
+</html>
+

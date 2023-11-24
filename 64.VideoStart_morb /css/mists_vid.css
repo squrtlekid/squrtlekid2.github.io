@@ -1,0 +1,25 @@
+@charset "UTF-8";
+#displayed_video {
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    object-fit: cover;
+	top: 0;
+	left: 0;
+}
+.centered_text{
+position: relative;
+	text-align: center;
+	justify-content: center;
+	margin-top: 10vh;	
+}
+#truisum {
+font-family: Impact, Haettenschweiler, "Franklin Gothic Bold", "Arial Black", "sans-serif";
+	font-style: oblique;
+	border-width: thin;
+	border-style: solid;
+	margin-left: 30%;
+	margin-right: 30%;
+	background-color: #DD7386;
+	cursor: default; 
+}
